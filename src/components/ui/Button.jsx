@@ -1,6 +1,6 @@
 const skins = {
     primary: 'bg-blue-500',
-}
+};
 
 export const Button = ({
     element = 'button',
