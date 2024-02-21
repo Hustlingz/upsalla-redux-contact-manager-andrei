@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import { client } from './api/test';
-import { Button } from './components/ui/Button';
+import { useEffect, useState } from "react";
+import { client } from "./api/test";
+import { Button } from "./components/ui/Button";
 
 function App() {
   const [name, setName] = useState('');
