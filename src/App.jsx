@@ -2,12 +2,13 @@ import { useEffect, useState } from 'react';
 import { client } from './api/test';
 import { Button } from './components/ui/Button';
 import { useDispatch, useSelector } from 'react-redux';
+import { Footer } from './components/Footer';
 
 function App() {
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
   const dispatch = useDispatch();
-  const state = useSelector(({ counter }) => {
+  const sse = useSelector(({ counter }) => {
     return counter;
   });
 
@@ -49,7 +50,7 @@ function App() {
           -
         </button>
 
-        <span className="mx-8">{state}</span>
+        <span className="mx-8">{sse}</span>
 
         <button
           onClick={() => {
@@ -72,6 +73,8 @@ function App() {
       >
         Add 42
       </button>
+
+      <Footer></Footer>
     </h1>
   );
 }
